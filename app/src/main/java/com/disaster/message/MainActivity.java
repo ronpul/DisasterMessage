@@ -12,8 +12,6 @@ import com.google.android.material.tabs.TabLayoutMediator;
 import utils.BackClickEventHandler;
 
 public class MainActivity extends AppCompatActivity {
-    private ViewPager2 viewPager;
-    private PagerAdapter pagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,8 +19,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         TabLayout tabLayout = findViewById(R.id.tabLayout);
-        viewPager = findViewById(R.id.viewpager);
-        pagerAdapter = new PagerAdapter(this);
+        ViewPager2 viewPager = findViewById(R.id.viewpager);
+        PagerAdapter pagerAdapter = new PagerAdapter(this);
         viewPager.setAdapter(pagerAdapter);
 
         addTabItem(tabLayout, viewPager,"HOME");
